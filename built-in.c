@@ -24,7 +24,6 @@ int set_env(char *text)
 	}
 	else
 	{
-	printf("Environment variable %s set to %s\n", name, value);
 	return (1);
 	}
 	}
@@ -49,10 +48,6 @@ int get_env(char *name)
 	{
 	printf("%s=%s\n", name, value);
 	return (1);
-	}
-	else
-	{
-	printf("Environment variable %s not found", name);
 	}
 	return (0);
 }
@@ -87,7 +82,6 @@ int cd(char *text)
 	}
 if (chdir(text) == 0)
 {
-	printf("Changed directory to %s\n", text);
 	return (1);
 	}
 	else
